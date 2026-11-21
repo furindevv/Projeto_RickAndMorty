@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiverso Rick and Morty — Personagens</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="portal" aria-hidden="true"></div>
+    <h1>Multiverso <span>Rick and Morty</span></h1>
+    <p>Personagens carregados em tempo real da API pública <a href="https://rickandmortyapi.com/" target="_blank" rel="noopener">rickandmortyapi.com</a></p>
+  </header>
+
+  <main>
+    <section class="sobre">
+      <h2>Sobre o desenho</h2>
+      <p>
+        <strong>Rick and Morty</strong> estreou em 2013 no Adult Swim e virou um dos maiores sucessos
+        da animação moderna: o cientista genial e irresponsável Rick Sanchez arrasta o neto Morty
+        por aventuras interdimensionais, com humor ácido e questões sobre o sentido da vida.
+        Explore abaixo os personagens de todas as dimensões.
+      </p>
+    </section>
+
+    <section class="controles" aria-label="Filtros">
+      <input type="search" id="busca" placeholder="Buscar personagem pelo nome…" aria-label="Buscar personagem">
+      <select id="status" aria-label="Filtrar por status">
+        <option value="">Todos os status</option>
+        <option value="alive">Vivo</option>
+        <option value="dead">Morto</option>
+        <option value="unknown">Desconhecido</option>
+      </select>
+      <button id="btn-favoritos" type="button" aria-pressed="false">♥ Só favoritos</button>
+    </section>
+
+    <p id="mensagem" role="status" aria-live="polite"></p>
+
+    <!-- O HTML só fornece o contêiner: os cards são criados pelo JavaScript -->
+    <section id="cards" class="grid" aria-label="Lista de personagens"></section>
+
+    <nav class="paginacao" aria-label="Paginação">
+      <button id="anterior" type="button">← Anterior</button>
+      <span id="pagina-info">Página 1</span>
+      <button id="proxima" type="button">Próxima →</button>
+    </nav>
+  </main>
+
+  <footer>
+    <p>Projeto acadêmico — HTML, CSS e JavaScript puros. Dados: Rick and Morty API.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
